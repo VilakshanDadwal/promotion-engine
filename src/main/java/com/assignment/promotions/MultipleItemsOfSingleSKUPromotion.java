@@ -33,7 +33,7 @@ public class MultipleItemsOfSingleSKUPromotion implements Promotion {
 
             applicablePrice = noOfTimesPromotionApplicable * fixedPrice;
 
-            skuItemsWithCount.put(skuItem, skuItemCount - requiredNoOfItems);
+            skuItemsWithCount.put(skuItem, skuItemCount - noOfTimesPromotionApplicable * requiredNoOfItems);
         }
 
         return applicablePrice;

@@ -29,6 +29,9 @@ public class GroupedSKUItemsPromotion implements Promotion {
         if (skuItemsWithCount.containsKey(skuItemOne) && skuItemsWithCount.containsKey(skuItemTwo)) {
             int noOfTimesPromotionApplicable = Math.min(skuItemsWithCount.get(skuItemOne), skuItemsWithCount.get(skuItemTwo));
             applicablePrice = noOfTimesPromotionApplicable * fixedPrice;
+
+            skuItemsWithCount.put(skuItemOne, skuItemsWithCount.get(skuItemOne) - noOfTimesPromotionApplicable);
+            skuItemsWithCount.put(skuItemTwo, skuItemsWithCount.get(skuItemTwo) - noOfTimesPromotionApplicable);
         }
         return applicablePrice;
     }
