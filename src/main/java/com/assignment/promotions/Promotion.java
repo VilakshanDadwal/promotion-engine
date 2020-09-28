@@ -1,6 +1,7 @@
 package com.assignment.promotions;
 
-import com.assignment.SKUItem;
+
+import com.assignment.model.SKUItem;
 
 import java.util.Map;
 

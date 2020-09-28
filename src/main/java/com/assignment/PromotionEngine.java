@@ -1,5 +1,7 @@
 package com.assignment;
 
+import com.assignment.model.Cart;
+import com.assignment.model.SKUItem;
 import com.assignment.promotions.Promotion;
 
 import java.util.Arrays;

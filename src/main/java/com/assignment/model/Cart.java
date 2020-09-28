@@ -1,6 +1,5 @@
-package com.assignment;
+package com.assignment.model;
 
-import java.util.List;
 import java.util.Map;
 
 public class Cart {
