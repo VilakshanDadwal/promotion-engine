@@ -28,6 +28,7 @@ public class PromotionChain {
         for (Promotion promotion : promotions) {
             totalOrderValue += promotion.apply(skuItemWithOccurrenceCount);
         }
+
         return totalOrderValue;
     }
 }
