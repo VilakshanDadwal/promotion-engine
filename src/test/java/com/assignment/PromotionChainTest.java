@@ -6,9 +6,9 @@ import org.junit.Before;
 import org.junit.Test;
 
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
-
-import static org.junit.Assert.*;
+import java.util.Map;
 
 public class PromotionChainTest {
 
@@ -27,7 +27,13 @@ public class PromotionChainTest {
     @Test
     public void shouldApplyPromotionsAndCalculateOrderValue() {
 
-        int actualOrderValue = promotionChain.evaluate(new Cart(Arrays.asList(SKUItem.A)));
+        Map<SKUItem, Integer> skuItemsWithCount = new HashMap<>();
+
+        skuItemsWithCount.put(SKUItem.A, 1);
+        skuItemsWithCount.put(SKUItem.B, 1);
+        skuItemsWithCount.put(SKUItem.C, 1);
+
+        int actualOrderValue = promotionChain.evaluate(new Cart(skuItemsWithCount));
 
         Assert.assertEquals(actualOrderValue, 15);
 

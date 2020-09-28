@@ -2,10 +2,10 @@ package com.assignment.promotions;
 
 import com.assignment.SKUItem;
 
-import java.util.List;
+import java.util.Map;
 
 @FunctionalInterface
 public interface Promotion {
 
-    int apply(List<SKUItem> skuItems);
+    int apply(Map<SKUItem, Integer> skuItems);
 }

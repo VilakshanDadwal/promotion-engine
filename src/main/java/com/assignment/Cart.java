@@ -1,16 +1,17 @@
 package com.assignment;
 
 import java.util.List;
+import java.util.Map;
 
 public class Cart {
 
-    List<SKUItem> skuItems;
+    Map<SKUItem, Integer> skuItemsWithCount;
 
-    public Cart(List<SKUItem> skuItems) {
-        this.skuItems = skuItems;
+    public Cart(Map<SKUItem, Integer> skuItemsWithCount) {
+        this.skuItemsWithCount = skuItemsWithCount;
     }
 
-    public List<SKUItem> getSkuItems() {
-        return skuItems;
+    public Map<SKUItem, Integer> getSkuItemsWithCount() {
+        return skuItemsWithCount;
     }
 }
